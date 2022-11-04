@@ -6,7 +6,14 @@ class Message extends StatelessWidget{
   Widget build(BuildContext context){
     return MaterialApp(
       home: Scaffold(
-
+        appBar: AppBar(
+          title: Text("Write A Message"),
+        ),
+        body: Column(
+          children: [
+            TextField(),
+          ],
+        ),
       ),
     );
   }
