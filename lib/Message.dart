@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Display.dart';
 
 class Message extends StatefulWidget{
 
@@ -46,7 +47,16 @@ class _MessageState extends State<Message> {
             Padding(
               padding: EdgeInsets.all(20),
               child: ElevatedButton(
-                  onPressed: null,
+                  onPressed: () {
+                    setState(() {
+                      var text = textController.text;
+                      textController.text.isEmpty ? null : Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Display(text))
+                      );
+                      textController.clear();
+                    });
+                  },
                   style: ButtonStyle(
                     padding: MaterialStateProperty.all<EdgeInsetsGeometry>(EdgeInsets.symmetric(horizontal: 50, vertical: 15)),
                     backgroundColor: MaterialStateProperty.all<Color>(themeColor),

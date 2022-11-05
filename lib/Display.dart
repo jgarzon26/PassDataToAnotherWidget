@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'Message.dart';
 
 class Display extends StatelessWidget{
 
@@ -20,7 +21,9 @@ class Display extends StatelessWidget{
               size: 35,
               color: Colors.white,
             ),
-            onPressed: null,
+            onPressed: () {
+              Navigator.pop(context);
+            },
           ),
           title: Text(
             "Page Two",
