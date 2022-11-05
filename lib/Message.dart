@@ -18,7 +18,7 @@ class _MessageState extends State<Message> {
       home: Scaffold(
         appBar: AppBar(
           title: const Text(
-            "Page One",
+            "Page One" ,
             style: TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 28,
