@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Message extends StatelessWidget{
+class Message extends StatefulWidget{
+
+  @override
+  State<Message> createState() => _MessageState();
+}
+
+class _MessageState extends State<Message> {
+
+  final textController = TextEditingController();
 
   @override
   Widget build(BuildContext context){
@@ -23,6 +31,7 @@ class Message extends StatelessWidget{
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
               child: TextField(
+                controller: textController,
                 decoration: InputDecoration(
                   hintText: "Enter your message",
                   hintStyle: TextStyle(
